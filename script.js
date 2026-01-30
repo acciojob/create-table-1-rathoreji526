@@ -1,5 +1,7 @@
 function insert_Row() {
-    let table = document.querySelector("#sampleTable");
+	let table = document.querySelector("#sampleTable");
+	let tbody = table.tBodies[0] || table.appendChild(document.createElement("tbody"));
+    
 	let row = document.createElement("tr");
 	let td1 = document.createElement("td");
 	td1.textContent = "New Cell1";
@@ -7,5 +9,6 @@ function insert_Row() {
 	td2.textContent = "New Cell2";
 	row.append(td1);
 	row.append(td2);
-	table.prepend(row);
+	// table.prepend(row);
+	tbody.prepend(row);
 }
